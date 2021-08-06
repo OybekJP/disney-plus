@@ -6,10 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" type="text/javascript"></script>
 </head>
 <body >
   <!-- container for all items exceps banner image. Banner image -->
-  <div id="container">
+  
     <div class="header-nav-container-outer">
       <div class="header-nav-container-inner">
         <header>
@@ -34,7 +35,10 @@
       </div>
     </div>
     <section class="banner-section">
-      <img src="media/hero-banner.jpg" alt="banner with movies heroes">
+      <picture>
+        <source media="(max-width: 800px)" srcset="media/hero-banner-small.jpg">
+        <img src="media/hero-banner.jpg">
+      </picture>
     </section>
     <div class="top-cta-section-container">
       <section class="top-cta-section">
@@ -100,7 +104,5 @@
           </div>
         </div>
     </section>
-    <!--just a comment-->
-  </div>
 </body>
 </html>

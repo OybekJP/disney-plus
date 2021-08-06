@@ -43,7 +43,8 @@ body {
   font-size: 14px;
   font-size: 1rem;
   /*overflow-y: hidden;*/
-  min-width: 1280px;
+  max-width: 1280px;
+  margin:auto;
   color: var(--white);
   font-family: Noto Sans,Helvetica Neue,Arial,sans-serif!important;
   background-color: var(--gray);
@@ -53,9 +54,9 @@ body {
 
 /*container*/
 #container {
-  max-width:1230px;
+  /*max-width:1230px;*/
   /*border:2px solid green;*/
-  margin: 0 auto;
+ /* margin: 0 auto;*/
 }
 
 /*header-nav-container*/
@@ -65,6 +66,7 @@ body {
   top:0;
   right:0;
   left:0;
+  z-index: 10;
 }
 .header-nav-container-inner{
   max-width:1230px;
@@ -99,6 +101,9 @@ nav ul{
   align-items:center;
   height:48px;
   font-weight:600;
+
+  overflow: auto;
+  white-space: nowrap;
 }
 .nav-li a:hover{
   padding-bottom:10px;
@@ -108,13 +113,24 @@ nav ul{
   padding-left: 50px;
 }
 
+/*custom scrollbar track and thumb*/
+::-webkit-scrollbar{
+  width:5px;
+  height:5px;
+}
+::-webkit-scrollbar-track{
+  background:none;
+}
+::-webkit-scrollbar-thumb{
+  background:gray;
+}
+
 /*banner-section*/
 .banner-section{
   margin-top:102px;
 }
 .banner-section img{
-  width:100%;
-  image-orientation: inherit;
+  width:100%;   
 }
 
 /*top-cta-section*/
@@ -169,10 +185,12 @@ nav ul{
   margin-bottom:40px;
 }
 .chess-box-img{
-  width:50%;
+  width:auto;
+  max-width:50%;
+  height:auto;
 }
 .chess-box-text{
-  width: 50%;
+  max-width: 50%;
   display: flex;
   padding:0 70px;
   flex-direction: column;
