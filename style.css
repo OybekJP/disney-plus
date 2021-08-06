@@ -48,15 +48,7 @@ body {
   color: var(--white);
   font-family: Noto Sans,Helvetica Neue,Arial,sans-serif!important;
   background-color: var(--gray);
-  line-height:1.42857143;
-}
-
-
-/*container*/
-#container {
-  /*max-width:1230px;*/
-  /*border:2px solid green;*/
- /* margin: 0 auto;*/
+  line-height:1.6;
 }
 
 /*header-nav-container*/
@@ -235,7 +227,7 @@ nav ul{
   margin-bottom:20px;
   transition: transform 0.5s;
   border:5px solid #4d5279;
-  background-color: #353a5e; 
+  background-color: #353a5e;
 }
 .pixar{
   background-image: url(media/pixar_brand.png);
@@ -260,4 +252,49 @@ nav ul{
   background-image: url(media/disney_brand.png), url(media/disney.gif);
   transform:scale(1.05);
   border:5px solid var(--white);
+} 
+.socials{
+  text-align:center;
+}
+/*tablets and smartphones*/
+@media only screen and (max-width:800px){
+  .chess-box-right, .chess-box-left{
+    flex-direction:column;
+    align-items:center;
+    max-width:800px;
+  }
+  /*img and text weren't strteching because they only had 50% of the width*/
+  .chess-box-img, .chess-box-text{
+    max-width:100%;
+    text-align: center;
+    padding:0;
+  }
+  .fav-studio-container{
+    flex-direction:column;
+  }
+  .fav-studio-box{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+  }
+  .fav-studio-img{
+    max-width:50%;
+  }
+  .fav-studio-box p{
+    padding:0 1rem;
+    text-align:center;
+  }
+}
+
+/*smartphones with a small screen*/
+@media only screen and (max-width:480px){
+  h1{
+    font-size:5vw;
+  }
+  h5{
+    font-size:3vw;
+  }
+  h3{
+    font-weight:normal;
+  }
 }
