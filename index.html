@@ -6,20 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Disney+</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script defer src="script.js" type="text/javascript"></script>
 </head>
+
 <body >
-  <!-- container for all items exceps banner image. Banner image -->
-  
     <div class="header-nav-container-outer">
-      <div class="header-nav-container-inner">
-        <header>
+      <!-------Header section------->
+      <header>
+        <div class="header-wrapper">
+
           <img class="logo" src="media/disney-logo.png"  alt="disney plus logo">
           <div id="header-btn-container">
             <a href="#" class="header-btn cta-btn">WEBで視聴</a>
             <a href="#" class="header-btn cta-btn">新規入会</a>
           </div>
-        </header>
+        </div>
+      </header>
+      <div class="header-nav-container-inner">
+        <!-------Navigation section------->
         <nav>
           <ul>
             <li class="nav-li first-li"><a href="#" class="nav-li-a">Disney+とは</a></li>
@@ -34,12 +39,16 @@
         </nav>
       </div>
     </div>
+
+    <!-------banner section with disney characters collage------->
     <section class="banner-section">
       <picture>
         <source media="(max-width: 800px)" srcset="media/hero-banner-small.jpg">
         <img src="media/hero-banner.jpg">
       </picture>
     </section>
+
+    <!-------call to action (CTA) section ------->
     <div class="top-cta-section-container">
       <section class="top-cta-section">
         <h1>ディズニーな毎日をプラスしよう。</h1>
@@ -51,6 +60,8 @@
         <p id="learn-more-link"><a  href="#"><span class="learn-more-icon">></span>ディズニーデラックスからの移行について</a></p>
       </section>
     </div>
+
+    <!-------section showcasing top disney movies and characters------->
     <div class="chess-box-container">  
       <section class="summer-campaign chess-box-left">
         <img class="chess-box-img" src="media/summer-campaign.jpg" alt="disney movies heroes collage">
@@ -78,25 +89,34 @@
         </div>
       </section>
     </div>
+
+    <!-------this section doesnt exist on Official Dinsey+ LP. I added to show my most favorite studios------->
     <section class="fav-studio-section">
       <h3>My Favotite Studios</h3>
       <div class="fav-studio-container">
         <div class="fav-studio-box">
           <div class="fav-studio-img pixar" >
-            <!--<img class="brand-logo" src="media/pixar_brand.png">
-              <img class="brand-gif" src="media/pixar.gif">-->
+              <audio id="pixar" preload="auto">
+                <source src="media/PIXAR opening theme.mp3">
+              </audio>
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum maiores debitis necessitatibus facere est, nulla reiciendis perferendis et laudantium omnis.</p>
           </div>
           <div class="fav-studio-box">
             <div class="fav-studio-img marvel">
+              <audio id="marvel" preload="auto">
+                <source src="media/Marvel Opening Theme.mp3">
+              </audio>
               <img class="brand-logo" href="">
               <img class="brand-gif" href="">          
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum maiores debitis necessitatibus facere est, nulla reiciendis perferendis et laudantium omnis.</p>
           </div>
           <div class="fav-studio-box">
-            <div class="fav-studio-img disney">
+            <div class=" disney fav-studio-img">
+              <audio id="disneyIntro" preload="auto">
+                <source src="media/Disney Intro.mp3">
+              </audio>
               <img class="brand-logo" href="">
               <img class="brand-gif" href="">          
             </div>
@@ -109,6 +129,5 @@
       <p><a href="https://github.com/OybekJP" target="blank">Oybek's  Github profile</a></p>
       <a class="linkedin" href="https://www.linkedin.com/in/oybek-anapiyaev/">Linkedin</a>
     </section>
-    <!--adding a comment-->
 </body>
 </html>

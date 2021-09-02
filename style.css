@@ -59,9 +59,10 @@ body {
   right:0;
   left:0;
   z-index: 10;
+  width: 100%;
 }
 .header-nav-container-inner{
-  max-width:1230px;
+  max-width:1280px;
   margin:auto;
   top:0;
   width:100%;
@@ -69,11 +70,17 @@ body {
 
 /*header*/
 header{
-  display: flex;
-  max-height: 118px;
-  justify-content:space-between;
-  align-items:center; 
+  max-height: 118px; 
   background-color:var(--black);
+  padding: 10px 5px;
+}
+.header-wrapper{
+  max-width: 1280px;
+  width:100%;
+  margin:auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .logo{
   max-width: 100px;
@@ -93,14 +100,16 @@ nav ul{
   align-items:center;
   height:48px;
   font-weight:600;
-
+  /*create a scroll bar for content that overflows the borders*/
   overflow: auto;
   white-space: nowrap;
+  padding-left: 10px;
 }
 .nav-li a:hover{
   padding-bottom:10px;
   border-bottom: 5px solid var(--white);
 }
+/*give a left padding except to the first li child/element*/
 .nav-li:not(:first-child){
   padding-left: 50px;
 }
@@ -129,6 +138,7 @@ nav ul{
 .top-cta-section-container{
   display: flex;
   justify-content: center;
+  padding: 0 15px;
 }
 .top-cta-section{
   display:flex;
@@ -163,7 +173,9 @@ nav ul{
 }
 
 /*chess-box-container*/
-
+.chess-box-container{
+  padding: 0 15px;
+}
 
 /*summer-campaign*/
 .chess-box-left{
